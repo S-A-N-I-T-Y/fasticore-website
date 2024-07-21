@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>FASTICORETECHNOLOGY</title>
+    <title>Fasticore Technology</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
@@ -39,12 +39,14 @@
             alt="fasticoretechnology logo"
             class="main-logo"
           />
-          <button>get in touch</button>
+          <button class="cta-btn">get in touch</button>
         </nav>
 
-        <div class="mobile-menu">
-          <nav class="mobile-nav">
-            <ul>
+        <div id="mobile-menu" class="mobile-menu">
+          <div class="mobile-menu-contents">
+            <button onclick="closeUp()" class="menu-btn"><i class="fa-solid fa-x"></i></button>
+            <img class="main-logo" src="./images/main-logo.png" alt="" />
+            <ul class="mobile-menu-links">
               <li>
                 <a href="">Home</a>
               </li>
@@ -61,16 +63,30 @@
                 <a href="">Contact Us</a>
               </li>
             </ul>
-          </nav>
-          <button><i class="fa-solid fa-bars"></i></button>
+          </div>
+        </div>
+        <nav class="mobile-nav">
+          <button onclick="openUp()" id="open-menu" class="menu-btn"><i class="fa-solid fa-bars"></i></button>
           <img
             src="./images/main-logo.png"
             alt="fasticoretechnology"
             class="main-logo"
           />
-          <button>get in touch</button>
-        </div>
+          <button class="cta-btn">get in touch</button>
+        </nav>
       </header>
     </main>
+    <script>
+      let openMenu = document.getElementById("open-menu")
+      let mobileMenu = document.getElementById("mobile-menu")
+      
+
+      function openUp(){
+        mobileMenu.style.display = "block"
+      }
+      function closeUp(){
+        mobileMenu.style.display = "none"
+      }
+    </script>
   </body>
 </html>
