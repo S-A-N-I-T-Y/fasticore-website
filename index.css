@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand&display=swap");
 
 :root {
-  --main-blue: #003399;
+  --main-blue: #0a40b1;
   --main-orange: #ff6600;
   --dark-blue: #1c0f4a;
   --background-brown: #280028;
@@ -21,6 +21,7 @@
   margin: 0;
   box-sizing: border-box;
   font-family: "Quicksand", sans-serif;
+  line-height: 1.5;
 }
 /* UNiversal */
 .cta-btn {
@@ -36,6 +37,7 @@
 /* Main menu */
 header {
   width: 100%;
+  height: 10vh;
   padding: 20px 30px;
   background: var(--light);
 }
@@ -71,13 +73,15 @@ ul li a {
   top: 0;
   left: 0;
   list-style: none;
-  background-color: var(--dark);
+  background-color: var(--light);
   color: var(--light);
   height: 100%;
   width: 100%;
   padding: 10px 0px;
-  -webkit-animation: scale-in-bl 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-  animation: scale-in-bl 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  z-index: 10;
+}
+.mobile-menu.active {
+  display: block; /* Show when active */
 }
 .mobile-menu-contents {
   position: relative;
@@ -96,16 +100,187 @@ ul li a {
   left: 0;
   top: 20vh;
 }
-#close{
-  
-}
 .menu-btn {
   width: 30px;
   height: 30px;
   border: none;
   border-radius: 2px;
   font-size: 20px;
+}
 
+/* Hero */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 60vh;
+}
+.hero-carousel {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  height: 100%;
+}
+.hero-carousel .prev {
+  height: 30px;
+  width: 30px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  color: var(--light);
+  margin-left: 10px;
+}
+.hero-carousel .next {
+  height: 30px;
+  width: 30px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  color: var(--light);
+  margin-right: 10px;
+}
+.hero-carousel-item {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero-carousel-img {
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.hero-carousel-contents {
+  position: absolute;
+  color: var(--light);
+  width: 80%;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 13px;
+  padding: 20px 30px;
+}
+.float-content {
+  background-color: rgba(107, 105, 105, 0.7);
+  height: 300px;
+  border-radius: 13px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px 30px;
+  margin: 10px;
+  overflow: hidden;
+}
+.float-content h1 {
+  margin-bottom: 10px;
+  font-size: 35px;
+  font-weight: bold;
+}
+.float-content p {
+  font-style: italic;
+}
+.hero-carousel-contents button {
+  display: block;
+  margin-bottom: 10px;
+}
+/* Workflow */
+.workflow {
+  width: 100%;
+}
+.workflow-container {
+  margin: 0px 10%;
+  padding: 40px 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.workflow-item {
+  border-radius: 14px;
+  box-shadow: 13px 13px 26px #bebebe, -13px -13px 26px #ffffff;
+  width: 100%;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  padding: 20px 30px;
+}
+.workflow-item .workflow-img {
+  width: 150px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+.workflow-img img {
+  width: 100%;
+}
+/* vision */
+.vision {
+  background: var(--main-blue);
+  padding: 40px 30px; 
+  min-height: 50vh; 
+}
+.vision-container {
+  margin: 0 10%;
+  height: 100%;
+}
+.vision-container h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 40px;
+  color: var(--light);
+}
+.vision-cards {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+.vision-card {
+  background: rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  border-radius: 14px;
+  padding: 20px 20px;
+}
+.vision-card p {
+  font-size: 20px;
+  color: var(--light);
+}
+/* Animations */
+.scale-in-bl {
+  -webkit-animation: scale-in-bl 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: scale-in-bl 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+.scale-out-bl {
+  -webkit-animation: scale-out-bl 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53)
+    both;
+  animation: scale-out-bl 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+}
+
+@keyframes scale-out-bl {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transform-origin: 0% 100%;
+    transform-origin: 0% 100%;
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    -webkit-transform-origin: 0% 100%;
+    transform-origin: 0% 100%;
+    opacity: 1;
+  }
 }
 
 @keyframes scale-in-bl {
@@ -113,20 +288,19 @@ ul li a {
     -webkit-transform: scale(0);
     transform: scale(0);
     -webkit-transform-origin: 0% 100%;
-    transform-origin: 0% 100%;
+    transorm-origin: 0% 100%;
     opacity: 1;
   }
-  100%{
+  100% {
     -webkit-transform: scale(1);
     transform: scale(1);
     -webkit-transform-origin: 0% 100%;
     transform-origin: 0% 100%;
     opacity: 1;
   }
-
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 1024px) {
   header {
     padding: 10px 0px;
   }
@@ -139,4 +313,37 @@ ul li a {
   .cta-btn {
     padding: 10px 10px;
   }
+  .vision-cards {
+    display: block;
+  }
+  .vision-card{
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 768px) {
+  .float-content h1 {
+    font-size: 25px;
+  }
+  .workflow{
+    height: auto;
+  }
+  .workflow-container {
+    display: block;
+    padding: 40px 0px ;
+    margin: auto 30px;
+  }
+  .workflow-item{
+    margin-bottom: 20px;
+  }
+ 
+  .vision {
+    padding: 40px 0;
+  }
+  .vision-container h1 {
+    font-size: 24px;
+  }
+  .vision-container {
+    margin: 0 30px;
+  }
+ 
 }

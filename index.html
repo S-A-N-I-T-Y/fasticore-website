@@ -44,7 +44,9 @@
 
         <div id="mobile-menu" class="mobile-menu">
           <div class="mobile-menu-contents">
-            <button onclick="closeUp()" class="menu-btn"><i class="fa-solid fa-x"></i></button>
+            <button id="close" class="menu-btn">
+              <i class="fa-solid fa-x"></i>
+            </button>
             <img class="main-logo" src="./images/main-logo.png" alt="" />
             <ul class="mobile-menu-links">
               <li>
@@ -66,7 +68,9 @@
           </div>
         </div>
         <nav class="mobile-nav">
-          <button onclick="openUp()" id="open-menu" class="menu-btn"><i class="fa-solid fa-bars"></i></button>
+          <button id="open-menu" class="menu-btn">
+            <i class="fa-solid fa-bars"></i>
+          </button>
           <img
             src="./images/main-logo.png"
             alt="fasticoretechnology"
@@ -75,18 +79,139 @@
           <button class="cta-btn">get in touch</button>
         </nav>
       </header>
-    </main>
-    <script>
-      let openMenu = document.getElementById("open-menu")
-      let mobileMenu = document.getElementById("mobile-menu")
-      
 
-      function openUp(){
-        mobileMenu.style.display = "block"
-      }
-      function closeUp(){
-        mobileMenu.style.display = "none"
-      }
-    </script>
+      <section class="hero" id="hero">
+        <div class="hero-carousel" id="hero-carousel">
+          <div class="hero-carousel-item" id="hero-carousel-item">
+            <img
+              src="/images/ilya-pavlov-OqtafYT5kTw-unsplash.jpg"
+              alt=""
+              class="hero-carousel-img"
+            />
+            <div class="hero-carousel-contents">
+              <div class="float-content">
+                <h1>Analyze and Build your software products</h1>
+                <p>
+                  Empower your business with bespoke digital solutions and
+                  enhancement from Fasticore
+                </p>
+              </div>
+              <button class="cta-btn">Check out our service</button>
+              <button class="cta-btn">Learn More</button>
+            </div>
+          </div>
+          <button id="prev" class="prev">
+            <i class="fa-solid fa-arrow-left"></i>
+          </button>
+          <button id="next" class="next">
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+      </section>
+
+      <section class="workflow">
+        <div class="workflow-container">
+          <div class="workflow-item">
+            <div class="workflow-img">
+              <img src="/images/undraw_business_deal_re_up4u.svg" alt="" />
+            </div>
+            <div class="workflow-text">
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo
+                sit est dignissimos dicta alias porro iusto, magni
+                necessitatibus labore temporibus.
+              </p>
+            </div>
+          </div>
+          <div class="workflow-item">
+            <div class="workflow-img">
+              <img src="/images/undraw_applications_mqwk.svg" alt="" />
+            </div>
+            <div class="workflow-text">
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo
+                sit est dignissimos dicta alias porro iusto, magni
+                necessitatibus labore temporibus.
+              </p>
+            </div>
+          </div>
+          <div class="workflow-item">
+            <div class="workflow-img">
+              <img src="/images/undraw_open_notes_hu0k.svg" alt="" />
+            </div>
+            <div class="workflow-text">
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo
+                sit est dignissimos dicta alias porro iusto, magni
+                necessitatibus labore temporibus.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="vision">
+        <div class="vision-container">
+          <h1>THE SOFTWARE DEVELOPMENT COMPANY THAT EMPOWERS BUSINESSES</h1>
+          <div class="vision-cards">
+            <div class="vision-card">
+              <p>
+                Our comprehensive approach includes consulting, engineering, and
+                support services. As a software solutions provider, we deliver
+                custom AI, Blockchain, IoT, mobile, and other solutions.
+                Intellecsoft handles projects of any type and difficulty. From
+                simple mobile apps to cloud-based enterprise-level products.
+                Reinforce your business with the combination of our expertise,
+                resources, intelligence in technology, and passion for
+                delivering innovative software solutions that make a difference.
+              </p>
+            </div>
+            <div class="vision-card">
+              <p>
+                Our comprehensive approach includes consulting, engineering, and
+                support services. As a software solutions provider, we deliver
+                custom AI, Blockchain, IoT, mobile, and other solutions.
+                Intellecsoft handles projects of any type and difficulty. From
+                simple mobile apps to cloud-based enterprise-level products.
+                Reinforce your business with the combination of our expertise,
+                resources, intelligence in technology, and passion for
+                delivering innovative software solutions that make a difference.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="services">
+        <div class="services-container">
+          <h1>We provide customer-driven and efficient services</h1>
+          <div class="service-item">
+            <div class="service-item-img">
+              <img src="/images/" alt="" />
+            </div>
+            <p>Web Development</p>
+          </div>
+          <div class="service-item">
+            <div class="service-item-img">
+              <img src="/images/" alt="" />
+            </div>
+            <p>Web Development</p>
+          </div>
+          <div class="service-item">
+            <div class="service-item-img">
+              <img src="/images/" alt="" />
+            </div>
+            <p>Web Development</p>
+          </div>
+          <div class="service-item">
+            <div class="service-item-img">
+              <img src="/images/" alt="" />
+            </div>
+            <p>Web Development</p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="index.js"></script>
   </body>
 </html>
