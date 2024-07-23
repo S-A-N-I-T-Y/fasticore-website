@@ -15,33 +15,28 @@ closeMenu.addEventListener("click", function closeUp() {
   }, 500);
 });
 
-  const carousel = document.getElementById("hero-carousel");
-  const carouselItem = document.getElementById("hero-carousel-item");
-  const prevBtn = document.getElementById("prev");
-  const nextBtn = document.getElementById("next");
-
+document.addEventListener('DOMContentLoaded', function() {
+  const items = document.querySelectorAll('.hero-carousel-item');
+  const prevButton = document.querySelector('.hero-carousel .prev');
+  const nextButton = document.querySelector('.hero-carousel .next');
   let currentIndex = 0;
-  console.log(carouselItem.clientWidth);
 
-  const updateCarousel = () => {
-    const itemWidth =
-      carouselItem[0].clientWidth;
-    const offset = -currentIndex * itemWidth;
-    carousel.style.transform = `translateX(${offset}px)`;
-  };
+  function showItem(index) {
+      items.forEach(item => item.classList.remove('active'));
+      if (items[index]) {
+          items[index].classList.add('active');
+      }
+  }
 
-  nextBtn.addEventListener("click", () => {
-    if (currentIndex < carouselItem.length - 1) {
-      currentIndex ++;
-      updateCarousel();
-    }
+  prevButton.addEventListener('click', function() {
+      currentIndex = (currentIndex === 0) ? items.length - 1 : currentIndex - 1;
+      showItem(currentIndex);
   });
 
-  prevBtn.addEventListener("click", () => {
-    if (currentIndex > 0) {
-      currentIndex --;
-      updateCarousel();
-    }
+  nextButton.addEventListener('click', function() {
+      currentIndex = (currentIndex === items.length - 1) ? 0 : currentIndex + 1;
+      showItem(currentIndex);
   });
 
-updateCarousel();
+  showItem(currentIndex);
+});
